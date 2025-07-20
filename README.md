@@ -67,3 +67,9 @@ AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
 ECR_REPOSITORY_NAME = myawslanggrapgh
 
 [![Deploy Application Docker Image to EC2 instance](https://github.com/SachinMishra-ux/AWS_langgrapgh_deployment/actions/workflows/cicd.yaml/badge.svg)](https://github.com/SachinMishra-ux/AWS_langgrapgh_deployment/actions/workflows/cicd.yaml)
+
+
+
+## Remove the spaces from server
+
+docker system prune -a --volumes -f
