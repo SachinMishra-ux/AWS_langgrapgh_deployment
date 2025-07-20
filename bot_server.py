@@ -90,5 +90,5 @@ async def reset_session(user=Depends(get_current_user)):
 # === Launch App ===
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("bot_server:app", host="0.0.0.0", port=8001)
+    uvicorn.run("bot_server:app", host="0.0.0.0", port=8002)
 
