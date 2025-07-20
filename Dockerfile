@@ -19,4 +19,4 @@ RUN pip install --no-cache-dir fastapi uvicorn python-dotenv
 EXPOSE 8000
 
 # Default command to run the app
-CMD ["uvicorn", "bot_server:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "bot_server:app", "--host", "0.0.0.0", "--port", "8001"]
