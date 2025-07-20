@@ -1,6 +1,6 @@
 
 from langchain_community.vectorstores import FAISS
-from embedding import get_azure_embedding_model
+from agentic_rag_langgrapgh.embedding import get_azure_embedding_model
 
 # === Load FAISS index ===
 def load_faiss_index(index_path, embedding_model):

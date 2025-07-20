@@ -4,8 +4,8 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
-from graph_builder import build_graph
-from auth import create_token, get_current_user
+from agentic_rag_langgrapgh.graph_builder import build_graph
+from agentic_rag_langgrapgh.auth import create_token, get_current_user
 
 # === Init FastAPI ===
 load_dotenv(override=True)
@@ -37,7 +37,7 @@ class ChatAgentResponse(BaseModel):
 
 @app.get("/")
 async def home():
-    return {"Hello from Ec2"}
+    return "Hello from Ec2"
 
 
 # === Chat Endpoint ===
@@ -90,5 +90,5 @@ async def reset_session(user=Depends(get_current_user)):
 # === Launch App ===
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("server:app", host="0.0.0.0", port=8000)
+    uvicorn.run("bot_server:app", host="0.0.0.0", port=8000)
 

@@ -4,9 +4,9 @@ from langgraph.graph import StateGraph, END
 from langgraph.graph.message import add_messages
 from langchain_core.messages import AIMessage
 from langgraph.prebuilt import create_react_agent
-from groq_llm import get_groq_llm
-from tools import register_tools
-from faiss_index import get_retriever
+from agentic_rag_langgrapgh.groq_llm import get_groq_llm
+from agentic_rag_langgrapgh.tools import register_tools
+from agentic_rag_langgrapgh.faiss_index import get_retriever
 
 # 1️⃣ Shared memory
 class AgentState(TypedDict):
