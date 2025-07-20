@@ -34,6 +34,12 @@ class ChatAgentResponse(BaseModel):
     answer: str
     updated_quiz: str | None = None
 
+
+@app.get("/")
+async def home():
+    return {"Hello from Ec2"}
+
+
 # === Chat Endpoint ===
 @app.post("/chat_agent", response_model=ChatAgentResponse)
 async def chat_agent(req: ChatAgentRequest, user=Depends(get_current_user)):
