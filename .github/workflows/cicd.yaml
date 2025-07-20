@@ -71,8 +71,3 @@ jobs:
       - name: Verify container is running
         run: |
           docker ps
-
-      - name: Optional: Show logs if any issue
-        if: failure()
-        run: |
-          docker logs test_langgraph_app || echo "No logs captured."
