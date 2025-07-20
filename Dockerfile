@@ -1,23 +1,22 @@
 # Use official Python image
-FROM python:3.12
+FROM python:3.12-slim-bookworm
 
-# Set workdir
+# Set working directory
 WORKDIR /app
 
-# Copy the contents of the local directory to /app in the container
-COPY . .
-
-# Install system-level dependencies (optional but useful for some Python packages)
-RUN apt-get update && apt-get install -y \
+# Install OS dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Install dependencies
-RUN pip install --no-cache-dir --upgrade pip && pip install -r requirements.txt
- 
+# Copy the application code
+COPY . /app
+
+# Install Python dependencies
+RUN pip install --no-cache-dir fastapi uvicorn python-dotenv
 
 # Expose port
 EXPOSE 8000
 
-# Run FastAPI app
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"] 
+# Default command to run the app
+CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
