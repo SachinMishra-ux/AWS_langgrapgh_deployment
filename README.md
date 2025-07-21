@@ -76,6 +76,7 @@ docker system prune -a --volumes -f
 
 ## docker images
 ## docker ps
+## docker ps -a
 
 
 ## To install aws-cli on ec2 machine:
@@ -90,3 +91,13 @@ sudo ./aws/install
 
 aws --version
 
+## pull the image
+docker pull 869935080204.dkr.ecr.ap-south-1.amazonaws.com/myawslanggrapgh:latest
+
+## Run the image
+
+docker run -d   -e AWS_ACCESS_KEY_ID= ""   -e AWS_SECRET_ACCESS_KEY= ""   -e AWS_DEFAULT_REGION=ap-south-1   -p 8000:8000   869935080204.dkr.ecr.ap-south-1.amazonaws.com/myawslanggrapgh:latest
+
+
+## docker ps -a --> to get conatiner id 
+## docker logs conatiner-id
