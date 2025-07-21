@@ -4,7 +4,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from datetime import datetime, timedelta
 import os
 
-SECRET_KEY = os.getenv("JWT_SECRET", "your-secret-key")
+SECRET_KEY = os.getenv("JWT_SECRET", "my_jwt_secret")
 ALGORITHM = "HS256"
 TOKEN_EXPIRE_MINUTES = 60
 
