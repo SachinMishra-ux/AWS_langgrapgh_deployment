@@ -43,6 +43,10 @@ async def home():
 async def health():
     return "Server is up & running"
 
+@app.get("/chat")
+async def chat():
+    return "How Can I help you today?"
+
 
 # # === Chat Endpoint ===
 # @app.post("/chat_agent", response_model=ChatAgentResponse)
