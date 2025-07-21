@@ -73,3 +73,20 @@ ECR_REPOSITORY_NAME = myawslanggrapgh
 ## Remove the spaces from server
 
 docker system prune -a --volumes -f
+
+## docker images
+## docker ps
+
+
+## To install aws-cli on ec2 machine:
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo apt install unzip -y
+unzip awscliv2.zip
+sudo ./aws/install
+
+
+## checke it
+
+aws --version
+
